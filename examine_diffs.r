@@ -4,7 +4,14 @@
 library(devtools)
 install_github("git2r", "ropensci")
 library(git2r)
+
 library(foreign)
+data<-data.frame('ID'=1:1000,
+                 'x'= sample(seq(from=0,to=1,length.out=1000),replace=TRUE,size=1000),
+                 'y'= sample(seq(from=0,to=1,length.out=1000),replace=TRUE,size=1000))
+write.dta(dataframe=data, file='points.dta')
+
+
 
 repo<-repository(getwd())
 

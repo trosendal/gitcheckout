@@ -3,4 +3,4 @@ points<-read.dta('points.dta')
 
 
 #my important figure
-plot(x=points$lat, y=points$lon)
+plot(x=points$x, y=points$y)
